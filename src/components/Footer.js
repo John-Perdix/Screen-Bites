@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
     return (
-            <div class="footer">
-        <div class="footer-esquerda">
+            <div className="footer">
+        <div className="footer-esquerda">
             <h1>Contactos</h1>
             <h2>E-mail</h2>
             <p>screenbites@business.com</p>
@@ -12,7 +12,7 @@ const Footer = () => {
             <h2>Morada</h2>
             <p>Largo da Velha, 5600</p>
         </div>
-        <div class="footer-direita">
+        <div className="footer-direita">
             <h1>Páginas</h1>
             <h2>Página Inicial</h2>
             <h2>Receitas</h2>
@@ -20,7 +20,7 @@ const Footer = () => {
             <h2>Notícias</h2>
             <h2>Arquivo</h2>
         </div>
-        <div class="footer-img">
+        <div className="footer-img">
             <img alt="screenbites_logo" src="recursos/logo1.png" width="20%" height=""/>
         </div>
     </div>
