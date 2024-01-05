@@ -1,35 +1,42 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function Navbar() {
-  return (
-    <div class="navbar">
-      <img alt="screenbites_logo" src="recursos/logo1.png" width="2%" height="3%"></img>
-        <h1>Receitas</h1>
-        <h1>Notícias</h1>
-        <span class="material-symbols-outlined">search</span>
-    </div>
-  );
-}
+//Import components
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+
+//import pages components
+import Homepage from './Pages/Homepage';
+import Recipe from './Pages/Recipe';
+import About from './Pages/About';
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <NavBar />
+
+        <Routes>
+          <Route path="/">
+            <Route index element={<Homepage />} />
+          </Route>
+        </Routes>
+
+        <Routes>
+          <Route path="/recipe">
+            <Route index element={<Recipe />} />
+          </Route>
+        </Routes>
+
+        <Routes>
+          <Route path="/about">
+            <Route index element={<About />} />
+          </Route>
+        </Routes>
+
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
