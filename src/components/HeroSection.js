@@ -1,21 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
     return (
         <>
-            <div class="conteudo-imagem">
+            <div className="conteudo-imagem">
                 <img alt="thebigsalad" src="recursos/the_big_salad.png" width="100%" height="" />
             </div>
-            <div class="home-conteudo-parent">
-                <div class="home-conteudo-child">
+            <div className="home-conteudo-parent">
+                <div className="home-conteudo-child">
                     <h1>The Big Salad</h1>
                     <h2>Seinfeld, "The Big Salad"</h2>
-                    <p><span class="material-symbols-outlined">
+                    <p><span className="material-symbols-outlined">
                         eco
-                    </span>Vegan <span class="material-symbols-outlined">Timer</span>10min.</p>
+                    </span>Vegan <span className="material-symbols-outlined">Timer</span>10min.</p>
                 </div>
-                <div class="home-conteudo-child2">
-                    <h1>Ver Receita</h1>
+                <div className="home-conteudo-child2">
+                    <Link to="/receita"><h1>Ver Receita</h1></Link>
                 </div>
             </div>
         </>

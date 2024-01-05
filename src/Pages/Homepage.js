@@ -7,10 +7,10 @@ import Cooks from "../components/Cooks";
 
 const Homepage = () => {
     return (
-        <body class="body-home">
-            <div class="home-conteudo">
+        <div className="body-home">
+            <div className="home-conteudo">
                 <HeroSection />
-                <div class="card-parent">
+                <div className="card-parent">
                     <Card />
                     <Card />
                     <Card />
@@ -18,7 +18,7 @@ const Homepage = () => {
             </div>
             <News/>
             <Cooks/>
-        </body>
+        </div>
     );
 }
 

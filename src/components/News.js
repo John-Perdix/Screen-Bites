@@ -17,36 +17,42 @@ const News = () => {
 
     useEffect(() => {
         fetchNews();
-
     }, [])
 
 
 
     return (
-        <div class="noticias-parent">
-            <div class="noticias-titulo">
+        <div className="noticias-parent">
+            <div className="noticias-titulo">
                 <h1>News</h1>
             </div>
-            <div class="noticias-child">
-                <div class="noticias-child-esq">
-                    <img alt="melissa thompson" src="recursos/noticia1.jpg" width="100%" height="" />
-                </div>
-                <div class="noticias-child-dir">
-                    <h1>{news.title}</h1>
-                    <p></p>
-                </div>
-            </div>
-            <div class="noticias-child">
-                <div class="noticias-child-esq">
-                    <h1>We tested recipes from these new cookbooks so you don’t have to</h1>
-                    <p>In a new series testing out cookbooks so you don’t have to, Olivia Campbell tries out
-                        a recipe from the gods, traces the history of nutmeg and turns that tin of beans in
-                        the back of the cupboard into a gourmet dinner</p>
-                </div>
-                <div class="noticias-child-dir">
-                    <img alt="melissa thompson" src="recursos/noticia1.jpg" width="100%" height="" />
-                </div>
-            </div>
+            {news && news.length > 0 ? (
+                news.map((object, index) => (
+                    index % 2 === 0 ? (
+                        <div key={index} className="noticias-child">
+                            <div className="noticias-child-esq">
+                                <img alt={object.title} src={object.metadata.image.url} width="100%" height="" />
+                            </div>
+                            <div className="noticias-child-dir">
+                                <h1>{object.title}</h1>
+                                <p>{object.metadata.newstext}</p>
+                            </div>
+                        </div>
+                    ) : (
+                        <div key={index} className="noticias-child">
+                            <div className="noticias-child-esq">
+                            <h1>{object.title}</h1>
+                                <p>{object.metadata.newstext}</p>
+                            </div>
+                            <div className="noticias-child-dir">
+                            <img alt={object.title} src={object.metadata.image.url} width="100%" height="" />
+                            </div>
+                        </div>
+                    )
+                ))
+            ) : (
+                <h2>There is nothing to see here</h2>
+            )}
         </div>
     );
 }
