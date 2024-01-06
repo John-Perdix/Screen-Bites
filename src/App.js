@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Homepage from './Pages/Homepage';
 import Recipe from './Pages/Recipe';
 import About from './Pages/About';
+import RecipesArchive from './Pages/RecipesArchive';
 
 function App() {
   return (
@@ -36,11 +37,13 @@ function App() {
   </Routes>*/}
 
 
-        {/*O ChatGPT sugeriu meter assim*/}
+        {/*O ChatGPT sugeriu meter assim
+        O chat GPT deve ser burro, porque o stor tem como eu tinha antes*/}
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/recipe" element={<Recipe />} />
+          <Route path="/recipe/:id" element={<Recipe />} />
           <Route path="/about" element={<About />} />
+          <Route path="/recipes" element={<RecipesArchive />} />
         </Routes>
 
         <Footer />
