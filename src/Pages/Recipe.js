@@ -40,7 +40,6 @@ const Recipe = () => {
                         <div className="conteudo">
                             <div className="conteudo-esquerda">
                                 <h2>Ingredients</h2>
-                                {/*<p>{object.metadata.ingredients}</p>*/}
                                 <p dangerouslySetInnerHTML={createMarkup(object.metadata.ingredients)}></p>
                             </div>
                             <div className="vl"></div>

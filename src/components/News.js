@@ -22,7 +22,7 @@ const News = () => {
 
 
     return (
-        <div className="noticias-parent">
+        <div className="noticias-parent margin-top-bottom">
             <div className="noticias-titulo">
                 <h1>News</h1>
             </div>

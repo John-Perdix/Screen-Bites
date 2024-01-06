@@ -16,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <div className='wrap'>
         <NavBar />
 
         {/*<Routes>
@@ -45,6 +46,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/recipes" element={<RecipesArchive />} />
         </Routes>
+        </div>
 
         <Footer />
       </BrowserRouter>

@@ -9,19 +9,49 @@
 
 /*__________________Navbar__________________*/
 .navbar {
-    border: 3px solid #F2EADF;
+    border: 3px solid #3D3737;
     border-radius: 60px;
     display: flex;
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     align-items: center;
     justify-content: space-between;
-    color: #F2EADF;
+    color: #3D3737;
     font-family: Shrikhand;
     font-size: 20px;
-    
+
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar {
+    position: absolute;
+    left: -150px; /* Adjust the value to fit your layout */
+    transition: left 0.3s ease; /* Add smooth transition */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.search-bar:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+.search-icon {
+    margin-left: -30px; /* Adjust the value to fit your layout */
+    cursor: pointer;
+    z-index: 2;
+}
+
+.show-search-bar .search-bar {
+    left: 0; /* Move the search bar to the visible position */
 }
 
 .navbar h1 {
@@ -30,20 +60,20 @@
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' #F2EADF,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    font-variation-settings:
+        'FILL' #F2EADF,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
 /*__________________Footer__________________*/
 .footer {
     background-color: #3D3737;
     display: flex;
-    padding: 50px ;
+    padding: 50px;
     justify-content: space-between;
-    
+
 }
 
 .footer h1 {
@@ -203,19 +233,19 @@
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' #3D3737,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    font-variation-settings:
+        'FILL' #3D3737,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
 .video-receita2 {
@@ -344,7 +374,7 @@
     padding-left: 15em;
     margin-top: -75px;
     margin-bottom: -75px;
-    
+
 }
 
 /*__________________Home__________________*/
@@ -355,14 +385,14 @@
 .home-conteudo {
     background-color: #F2EADF;
     border: 3px solid black;
-    border-radius: 60px;
-    padding: 36px;
+    border-radius: 3em;
+    padding: 1.5em;
     margin-left: 10em;
     margin-right: 10em;
 }
 
 .home-conteudo img {
-    border-radius: 50px;
+    border-radius: 1.5em;
 }
 
 .conteudo-imagem {
@@ -384,11 +414,11 @@
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
 .home-conteudo-child {
@@ -433,6 +463,7 @@
 
 .card-parent {
     display: flex;
+    flex-flow: row wrap;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 3em;
@@ -441,11 +472,16 @@
 .card-child {
     background-color: #FEE297;
     border: solid 3px black;
-    border-radius: 50px;
+    border-radius: 2em;
     padding: 1em;
     width: 25%;
     display: flex;
     flex-direction: column;
+    margin: 1em;
+}
+
+.card-child img {
+    border-radius: 1em;
 }
 
 .card-child a {
@@ -478,7 +514,7 @@
     text-align: center;
 }
 
-.card-child-bt h2  {
+.card-child-bt h2 {
     font-family: Shrikhand;
     font-size: 20px;
     color: #3D3737;
@@ -539,7 +575,7 @@
     border: 3px solid black;
     border-radius: 30px;
     color: #3D3737;
-    padding: 36px;    
+    padding: 36px;
     margin-left: 10em;
     margin-right: 10em;
 }
@@ -582,4 +618,404 @@
 
 .cooks-child-img {
     height: 50%;
+}
+
+.wrap {
+    flex-wrap: wrap;
+    padding: 2em;
+}
+
+.wrap {
+    max-width: 1600px;
+    margin: auto;
+}
+
+.App {
+    background-color: #FEB8B0;
+}
+
+.margin-top-bottom {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/*__________________MOBILE__________________*/
+@media (max-width: 600px) {
+    .wrap img{
+        width: 100%;
+        height: auto;
+    }
+
+    .body-receita {
+        
+    }
+
+    /*__________________Navbar__________________*/
+    .navbar {
+        all: unset;
+
+    }
+
+    .navbar h1 {
+        all: unset;
+    }
+
+    .material-symbols-outlined {
+        all: unset;
+    }
+
+    /*__________________Footer__________________*/
+    .footer {
+        all: unset;
+
+    }
+
+    .footer h1 {
+        all: unset;
+    }
+
+    .footer h2 {
+        all: unset;
+    }
+
+    .footer p {
+        all: unset;
+    }
+
+    .footer-img {
+        all: unset;
+    }
+
+    .footer-esquerda {
+        all: unset;
+    }
+
+    .footer-direita {
+        all: unset;
+    }
+
+    .footer a {
+        all: unset;
+    }
+
+
+
+
+
+
+    /*__________________Página da Receita__________________*/
+    .topo-imagem {
+        all: unset;
+    }
+
+    .info-imagem {
+        all: unset;
+    }
+
+    .info-imagem h1 {
+        all: unset;
+    }
+
+    .info-imagem h2 {
+        all: unset;
+    }
+
+    .conteudo {
+        all: unset;
+    }
+
+    .conteudo h2 {
+        all: unset;
+    }
+
+    .conteudo h3 {
+        all: unset;
+    }
+
+    .conteudo p {
+        all: unset;
+    }
+
+    .conteudo-direita {
+        all: unset;
+    }
+
+    .conteudo-esquerda {
+        all: unset;
+    }
+
+    .vl {
+        all: unset;
+    }
+
+    .video-receita1 {
+        all: unset;
+    }
+
+    .video-texto {
+        all: unset;
+    }
+
+    .video-video {
+        all: unset;
+    }
+
+    .video-texto h2 {
+        all: unset;
+    }
+
+    .video-texto p {
+        all: unset;
+    }
+
+    .material-symbols-outlined {
+        all: unset;
+    }
+
+    .material-symbols-outlined {
+        all: unset;
+    }
+
+    .video-receita2 {
+        all: unset;
+    }
+
+    .video-texto2 {
+        all: unset;
+    }
+
+    .video-texto3 {
+        all: unset;
+    }
+
+    .video-texto2 h2 {
+        all: unset;
+    }
+
+    .video-texto2 p {
+        all: unset;
+    }
+
+    .video-texto3 h2 {
+        all: unset;
+    }
+
+    .video-texto3 p {
+        all: unset;
+    }
+
+    .video-receita3 {
+        all: unset;
+    }
+
+    /*__________________About__________________*/
+    .body-about {
+        all: unset;
+    }
+
+    .about-parent {
+        all: unset;
+    }
+
+    .about-child {
+        all: unset;
+    }
+
+    .about-child h1 {
+        all: unset;
+    }
+
+    .about-child p {
+        all: unset;
+    }
+
+    .about-child2 h1 {
+        all: unset;
+    }
+
+    .about-child2 {
+        all: unset;
+    }
+
+    .about-child2 img {
+        all: unset;
+    }
+
+    .about-child3 {
+        all: unset;
+    }
+
+    .about-child3 h1 {
+        all: unset;
+    }
+
+    .about-child3 h2 {
+        all: unset;
+    }
+
+    .about-child3 p {
+        all: unset;
+    }
+
+    .about-child-dir {
+        all: unset;
+    }
+
+    /*__________________Home__________________*/
+    .body-home {
+        all: unset;
+    }
+
+    .home-conteudo {
+        all: unset;
+    }
+
+    .home-conteudo img {
+        all: unset;
+    }
+
+    .conteudo-imagem {
+        all: unset;
+    }
+
+    .home-conteudo-parent {
+        all: unset;
+    }
+
+    .material-symbols-outlined {
+        all: unset;
+    }
+
+    .home-conteudo-child {
+        all: unset;
+    }
+
+    .home-conteudo-child h1 {
+        all: unset;
+    }
+
+    .home-conteudo-child h2 {
+        all: unset;
+    }
+
+    .home-conteudo-child p {
+        all: unset;
+    }
+
+    .home-conteudo-child2 {
+        all: unset;
+    }
+
+    .home-conteudo-child2 h1 {
+        all: unset;
+    }
+
+    .card-parent {
+        all: unset;
+    }
+
+    .card-child {
+        all: unset;
+    }
+
+    .card-child img {
+        all: unset;
+    }
+
+    .card-child a {
+        all: unset;
+    }
+
+    .card-child-info h1 {
+        all: unset;
+    }
+
+    .card-child-info h2 {
+        all: unset;
+    }
+
+    .card-child-bt {
+        all: unset;
+    }
+
+    .card-child-bt h2 {
+        all: unset;
+    }
+
+    .noticias-parent {
+        all: unset;
+    }
+
+    .noticias-titulo {
+        all: unset;
+    }
+
+    .noticias-titulo h1 {
+        margin-top: 0;
+    }
+
+    .noticias-child {
+        all: unset;
+    }
+
+    .noticias-child img {
+        all: unset;
+    }
+
+    .noticias-child h1 {
+        all: unset;
+    }
+
+    .noticias-child p {
+        all: unset;
+    }
+
+    .noticias-child-esq {
+        all: unset;
+    }
+
+    .cooks-parent {
+        all: unset;
+    }
+
+    .cooks-titulo {
+        all: unset;
+    }
+
+    .cooks-child {
+        all: unset;
+    }
+
+    .cooks-child h2 {
+        all: unset;
+    }
+
+    .cooks-child p {
+        all: unset;
+    }
+
+    .cooks-child-1 {
+        all: unset;
+    }
+
+    .cooks-child-img {
+        all: unset;
+    }
+
+    .wrap {
+        all: unset;
+    }
+
+    .wrap {
+        all: unset;
+    }
+
+    .App {
+        all: unset;
+    }
+
+    .margin-top-bottom {
+        all: unset;
+    }
+
 }

@@ -26,8 +26,8 @@ const Homepage = () => {
       }, []);
 
     return (
-        <div className="body-home">
-            <div className="home-conteudo">
+        <div className="body-home" >
+            <div className="home-conteudo margin-top-bottom">
                 <HeroSection />
                 <div className="card-parent">
                     <Card recipes={recipe} />

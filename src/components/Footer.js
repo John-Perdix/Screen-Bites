@@ -21,7 +21,7 @@ const Footer = () => {
             <h2>Arquivo</h2>
         </div>
         <div className="footer-img">
-            <img alt="screenbites_logo" src="recursos/logo1.png" width="20%" height=""/>
+            <img alt="screenbites_logo" src="../logo_svg.svg" width="20%" height=""/>
         </div>
     </div>
     );
