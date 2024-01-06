@@ -12,8 +12,6 @@ const Homepage = () => {
                 <HeroSection />
                 <div className="card-parent">
                     <Card />
-                    <Card />
-                    <Card />
                 </div>
             </div>
             <News/>

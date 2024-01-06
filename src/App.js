@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
 
-        <Routes>
+        {/*<Routes>
           <Route path="/">
             <Route index element={<Homepage />} />
           </Route>
@@ -33,6 +33,14 @@ function App() {
           <Route path="/about">
             <Route index element={<About />} />
           </Route>
+  </Routes>*/}
+
+
+        {/*O ChatGPT sugeriu meter assim*/}
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/recipe" element={<Recipe />} />
+          <Route path="/about" element={<About />} />
         </Routes>
 
         <Footer />
