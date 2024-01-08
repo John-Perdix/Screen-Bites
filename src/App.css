@@ -1216,3 +1216,30 @@ disabled {
     }
 
 }
+
+@media (max-width: 600px) {
+    .navbar{
+        display: block;
+    }
+
+
+    .navbar div{
+        margin: auto;
+        text-align: center;
+    }
+
+
+}
+@media (max-width: 540px) {
+    .home-conteudo-parent h1{
+        font-size: 50px;
+    }
+
+    .home-conteudo-parent{
+        padding: 1em 0.5em;
+    }
+
+    .button{
+        font-size: 30px;
+    }
+}

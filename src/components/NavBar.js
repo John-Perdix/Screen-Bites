@@ -38,18 +38,18 @@ const NavBar = () => {
 
     return (
         <div className="navbar">
-            <div width="100%" style={{ padding: 0 }}>
+            <div style={{ padding: 0 }}>
                 <Link to="/"><img alt="screenbites_logo" src="../logo_svg.svg" width="15%" /></Link>
             </div>
 
-            <div width="100%">
+            <div>
                 <Link to="/recipes"><h1>Recipes</h1></Link>
             </div>
-            <div width="100%">
+            <div>
                 <Link to="/about"><h1>About</h1></Link>
             </div>
 
-            <div width="100%" className={`search-container ${showSearchBar ? 'show-search-bar' : ''}`}>
+            <div className={`search-container ${showSearchBar ? 'show-search-bar' : ''}`}>
                 <div style={{ backgroundColor }} className="search-button">
                 {showSearchBar && (
                     <form

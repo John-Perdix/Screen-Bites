@@ -22,11 +22,11 @@ const HeroSection = ({ recipes }) => {
                             <h1>{object.title}</h1>
                             <h2>{object.metadata.movie.title}</h2>
                             <p><FontAwesomeIcon icon={faClock} /> &nbsp; {object.metadata.duration} min</p>
-                            <div className="button-main">
+                            <div className="button-main button">
                                 <Link to={`/recipe/${object.id}`}>Recipe</Link>
                             </div>
                         </div>
-                        <div className="home-conteudo-child2 button-default">
+                        <div className="home-conteudo-child2 button-default button">
                             <Link to={`/recipes`}>All Recipes</Link>
                         </div>
                     </div>
