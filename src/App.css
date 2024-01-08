@@ -30,14 +30,20 @@
 
 .search-bar {
     display: inline;
-    left: -15em; 
-    transition: left 0.3s ease;
-    padding: 6px 10px;
+    left: -15em;
+    padding: 1em;
     border:none;
-    border-radius: 0.5em;
-    height: 2em;
+    border-radius: 5em;
+    height: 3em;
     width: 20em; 
     background: white;
+    color: #3D3737;
+
+    transition: 0.3s ease;
+}
+
+input.search-bar.active{
+    background-color: #fddad6;
 }
 
 .search-bar:focus {
@@ -45,9 +51,14 @@
 }
 
 .search-button {
+    display: flex;
+    align-items: center;
+
     background: none;
     border: none;
     font-size: 1.5em;
+    border-radius: 5em;
+    padding: 0 0.3em 0 0;
 }
 
 .search-button:hover {
@@ -507,15 +518,27 @@
     margin-bottom: 0;
 }
 
-.home-conteudo-child2 {
+.button-main{
     font-family: Shrikhand;
-    font-size: 16px;
-    color: #F2EADF;
+    font-size: 2.5em;
+    color: #3D3737 ;
+    max-width: min-content;
     border: 3px solid #F2EADF;
     border-radius: 60px;
-    height: fit-content;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1em;
+}
+
+.button-default{
+    font-family: Shrikhand;
+    font-size: 2.5em;
+    color: #F2EADF;
+    background-color: #172180;
+    border: 3px solid #F2EADF;
+    border-radius: 60px;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .home-conteudo-child2 h1 {
@@ -531,10 +554,10 @@
     margin-top: 3em;
 }
 
-.card-child:nth-last-child(-n + 2) {
+/* .card-child:nth-last-child(-n + 2) {
     margin-left: 2%;
     margin-right: 2%;
-  }
+  } */
 
 .card-child {
     background-color: #FEE297;
@@ -548,9 +571,6 @@
     justify-content: space-between;
 }
 
-.card-child:nth-last-child{
-    width: 100%;
-}
 
 .card-child img {
     border-radius: 1em;

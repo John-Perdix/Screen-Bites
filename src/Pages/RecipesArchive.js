@@ -1,12 +1,11 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import Card from "../components/Card";
 import { useLocation } from 'react-router-dom';
 
 const RecipesArchive = () => {
     const [loading, setLoading] = useState(true);//define the loading inicially to true
     const [recipe, setRecipe] = useState([]);
-
     const location = useLocation();
     const query = new URLSearchParams(location.search).get('search');
 
@@ -22,11 +21,14 @@ const RecipesArchive = () => {
             });
     }
 
-    const getFilteredItems =(query, recipe) =>{
-        if(!query){
-            return recipe;
-        }else{
-            return recipe.filter((recipe)=>recipe.title.includes(query) || recipe.metadata.movie.title.includes(query));
+    const getFilteredItems = (query, recipes) => {
+        if (!query || query.trim() === '') {
+            return recipes;
+        } else {
+            return recipes.filter(recipe =>
+                recipe.title.toLowerCase().includes(query.toLowerCase()) ||
+                (recipe.metadata && recipe.metadata.movie && recipe.metadata.movie.title.toLowerCase().includes(query.toLowerCase()))
+            );
         }
     }
     const filteredItems = getFilteredItems(query, recipe)
@@ -37,7 +39,7 @@ const RecipesArchive = () => {
 
     const list = !loading ? (
         <div className="card-parent wrap home-conteudo">
-            <Card recipes={filteredItems}/>
+            <Card recipes={filteredItems} />
         </div>
     ) : (
         <div className='padding-2 margin-auto'>

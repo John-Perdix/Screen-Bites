@@ -26,7 +26,7 @@ const Card = ({ recipes }) => {
                         <div className="card-child-info">
                             <div className="card-child-bt">
                                 <Link to={`/recipe/${object.id}`}>
-                                    <h2>Ver Receita</h2>
+                                    <h2>Recipe</h2>
                                 </Link>
                             </div>
                         </div>
