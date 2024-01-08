@@ -39,7 +39,7 @@ const News = () => {
                             </div>
                         </div>
                     ) : (
-                        <div key={index} className="noticias-child">
+                        <div key={index} className="noticias-child reverse">
                             <div className="noticias-child-esq">
                             <h1>{object.title}</h1>
                                 <p>{object.metadata.newstext}</p>

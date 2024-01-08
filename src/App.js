@@ -14,38 +14,18 @@ import RecipesArchive from './Pages/RecipesArchive';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App body-home">
       <BrowserRouter>
-      <div className='wrap'>
+      <div className='wrap grow'>
         <NavBar />
 
-        {/*<Routes>
-          <Route path="/">
-            <Route index element={<Homepage />} />
-          </Route>
-        </Routes>
-
-        <Routes>
-          <Route path="/recipe">
-            <Route index element={<Recipe />} />
-          </Route>
-        </Routes>
-
-        <Routes>
-          <Route path="/about">
-            <Route index element={<About />} />
-          </Route>
-  </Routes>*/}
-
-
-        {/*O ChatGPT sugeriu meter assim
-        O chat GPT deve ser burro, porque o stor tem como eu tinha antes*/}
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/recipe/:id" element={<Recipe />} />
           <Route path="/about" element={<About />} />
           <Route path="/recipes" element={<RecipesArchive />} />
         </Routes>
+        
         </div>
 
         <Footer />

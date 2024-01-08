@@ -9,6 +9,18 @@ import Cooks from "../components/Cooks";
 const Homepage = () => {
 
     const [recipe, setRecipe] = useState([]);
+    const [recipe1, setRecipe1] = useState([]);
+
+    //Fetch Receitas
+    const fetchRecipes1 = async () => {
+        await fetch('https://api.cosmicjs.com/v3/buckets/screen-bites-production/objects?pretty=true&query=%7B%22type%22:%22recipes%22%7D&limit=10&read_key=AKHFpPAIGewG9wW7Lg0XT3Q4lNOynoAFvZiCOvAuAYzY6p9yfJ&depth=1&props=slug,title,metadata,id,') // Fetch the first page to get the total number of pages
+            .then(response => response.json())
+            .then(result => {
+                const shuffledRecipes = result.objects.sort(() => Math.random() - 0.5);
+                const selectedRecipes = shuffledRecipes.slice(0, 1);
+                setRecipe1(selectedRecipes);
+            });
+    }
 
     //Fetch Receitas
     const fetchRecipes = async () => {
@@ -23,12 +35,13 @@ const Homepage = () => {
 
     useEffect(() => {
         fetchRecipes();
+        fetchRecipes1();
       }, []);
 
     return (
-        <div className="body-home" >
+        <div>
             <div className="home-conteudo margin-top-bottom">
-                <HeroSection />
+                <HeroSection recipes={recipe1}/>
                 <div className="card-parent">
                     <Card recipes={recipe} />
                 </div>

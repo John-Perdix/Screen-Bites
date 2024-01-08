@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
-const Card = ({recipes} ) => {
-      
+const Card = ({ recipes }) => {
+
     useEffect(() => {
 
     }, [recipes])
@@ -16,10 +16,14 @@ const Card = ({recipes} ) => {
                     <div className="card-child" key={object.id}>
                         <div className="card-child-img">
                             <img alt={object.title} src={object.metadata.image.url} width="100%" height="" />
-                        </div>
-                        <div className="card-child-info">
+
+                            <div className="card-child-info">
                             <h1>{object.title}</h1>
                             <h2>{object.metadata.movie.title}</h2>
+                        </div>
+                        </div>
+
+                        <div className="card-child-info">
                             <div className="card-child-bt">
                                 <Link to={`/recipe/${object.id}`}>
                                     <h2>Ver Receita</h2>

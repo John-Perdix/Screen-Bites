@@ -11,6 +11,7 @@ const Recipe = () => {
             .then(response => response.json())
             .then(result => {
                 setRecipe(result.objects);
+                
             });
     }
 
@@ -29,10 +30,10 @@ const Recipe = () => {
         <>
             {filteredRecipe && filteredRecipe.length > 0 ? (
                 filteredRecipe.map((object) => (
-                    <div className="body-receita">
-                        <div className="topo-imagem">
-                            <img alt={object.title} src={object.metadata.image.url} width="100%" height="900em" />
-                            <div className="info-imagem">
+                    <div key={object.id} className="body-receita">
+                        <div className="topo-imagem" style={{backgroundImage: `linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 100%)), url('${object.metadata.image.url}')`}}>
+                            {/* <img alt={object.title} src={object.metadata.image.url} width="100%" height="900em" /> */}
+                            <div className="title">
                                 <h1>{object.title}</h1>
                                 <h2>{object.metadata.movie.title}</h2>
                             </div>
@@ -46,6 +47,13 @@ const Recipe = () => {
                             <div className="conteudo-direita">
                                 <h2>Preparação</h2>
                                 <p dangerouslySetInnerHTML={createMarkup(object.metadata.preparation)}></p>
+                            </div>
+                        </div>
+                        <div className="recipe-cook">
+                            <h1>Cooked By</h1>
+                            <div className="recipe-cook-child">
+                                <img alt={object.metadata.cook.title} src={object.metadata.cook.metadata.image.url} width="100%" height="900em" />
+                                <p>{object.metadata.cook.title}</p>
                             </div>
                         </div>
                     </div>
