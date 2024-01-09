@@ -32,17 +32,17 @@
     display: inline;
     left: -15em;
     padding: 1em;
-    border:none;
+    border: none;
     border-radius: 5em;
     height: 3em;
-    width: 20em; 
+    width: 20em;
     background: white;
     color: #3D3737;
 
     transition: 0.3s ease;
 }
 
-input.search-bar.active{
+input.search-bar.active {
     background-color: #fddad6;
 }
 
@@ -146,9 +146,9 @@ input.search-bar.active{
     border: 3px solid black;
 }
 
-.title{
+.title {
     margin: 0;
-   
+
 }
 
 .title h1 {
@@ -195,7 +195,7 @@ input.search-bar.active{
     margin: auto;
     border-radius: 60px;
     position: relative;
-    top:-4em;
+    top: -4em;
     display: flex;
     padding: 69px;
 }
@@ -355,7 +355,7 @@ input.search-bar.active{
     font-size: 1.8em;
 }
 
-.recipe-cook-child img{
+.recipe-cook-child img {
     border-radius: 1em;
 }
 
@@ -486,6 +486,7 @@ input.search-bar.active{
     padding: 3em;
     border-radius: 2em;
 }
+
 .material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
@@ -518,10 +519,10 @@ input.search-bar.active{
     margin-bottom: 0;
 }
 
-.button-main{
+.button-main {
     font-family: Shrikhand;
     font-size: 2.5em;
-    color: #3D3737 ;
+    color: #3D3737;
     max-width: min-content;
     border: 3px solid #F2EADF;
     border-radius: 60px;
@@ -530,7 +531,7 @@ input.search-bar.active{
     margin-top: 1em;
 }
 
-.button-default{
+.button-default {
     font-family: Shrikhand;
     font-size: 2.5em;
     color: #F2EADF;
@@ -1218,14 +1219,13 @@ disabled {
 }
 
 @media (max-width: 600px) {
-    .navbar{
+    .navbar {
         display: flex;
         justify-content: space-between;
     }
 
 
-    .navbar div{
-        max-width: -moz-fit-content;
+    .navbar div {
         text-align: center;
         margin: 0;
         padding: 0;
@@ -1237,17 +1237,38 @@ disabled {
 
 
 }
+
 @media (max-width: 540px) {
-    .home-conteudo-parent h1{
-        font-size: 50px;
+    .home-conteudo-parent h1 {
+        font-size: 2em;
     }
 
-    .home-conteudo-parent{
+    .home-conteudo-parent h2 {
+        font-size: 1em;
+    }
+
+    .home-conteudo-parent p {
+        font-size: 0.8em;
+        margin: 0;
+    }
+
+    .home-conteudo-parent {
         padding: 1em 0.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: normal;
+        min-height: 600px;
+        border-radius: 2em;
     }
 
     .button{
-        font-size: 30px;
+        font-size: 1em;
+        max-width: max-content;
+    }
+
+    .button-default {
+        margin-top: 0.5em;
     }
 
     .home-conteudo{
@@ -1265,39 +1286,39 @@ disabled {
 
     /* ABOUT PAGE */
 
-    .about-parent{
-        font-size: 20px;
-        text-align: center;
-        margin-bottom: 2em;
-    }
+        .about-parent {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 2em;
+        }
 
-    .about-child{
-        display: block;
-        padding: 5px;
-    }
+        .about-child {
+            display: block;
+            padding: 5px;
+        }
 
-    .about-child2{
-        display: block;
-        padding: 5px;
-    }
+        .about-child2 {
+            display: block;
+            padding: 5px;
+        }
 
-    .about-child2 img{
-        width: 100%;
-    }
+        .about-child2 img {
+            width: 100%;
+        }
 
-    .about-child-dir{
-        padding: 0;
-        margin: 0;
-        border: none;
-    }
+        .about-child-dir {
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
 
-    .about-child3{
-        display: block;
-        padding: 0;
-        margin: 0;
-    }
+        .about-child3 {
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
 
-    .about-child p {
-        margin: 10px 0 ;
+        .about-child p {
+            margin: 10px 0;
+        }
     }
-}
