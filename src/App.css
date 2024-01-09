@@ -1265,6 +1265,9 @@ disabled {
     .button{
         font-size: 1em;
         max-width: max-content;
+        padding: 0.5em 3em;
+        
+        
     }
 
     .button-default {
