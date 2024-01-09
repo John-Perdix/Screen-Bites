@@ -1278,6 +1278,14 @@ disabled {
         display: inline;
     }
 
+    .footer-child{
+        display: block;
+    }
+
+    div.footer-child > *{
+        padding: 2em;
+    }
+
 
 }
 
