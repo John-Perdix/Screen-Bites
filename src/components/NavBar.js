@@ -44,6 +44,7 @@ const NavBar = () => {
 
     return (
         <div className="navbar">
+            <div className="nav-items">
             <div className="burger-icon">
                 <button onClick={toggleSearchMenu}><FontAwesomeIcon icon={faBurger} /></button>
             </div>
@@ -52,17 +53,14 @@ const NavBar = () => {
                 <Link to="/"><img alt="screenbites_logo" src="../logo_svg.svg" width="15%" /></Link>
             </div>
 
-            {showMenu && (
-                <div className={`menu-container ${showMenu ? 'show-menu' : ''}`}>
-                    <div>
+                    <div className="link-nav">
                         <Link to="/recipes"><h1>Recipes</h1></Link>
                     </div>
 
-                    <div>
+                    <div className="link-nav">
                         <Link to="/about"><h1>About</h1></Link>
                     </div>
-                </div>
-            )}
+
 
             <div className={`search-container ${showSearchBar ? 'show-search-bar' : ''}`}>
                 <div style={{ backgroundColor }} className="search-button">
@@ -92,6 +90,18 @@ const NavBar = () => {
                     </button>
                 </div>
             </div>
+            </div>
+            {showMenu && (
+                <div className={`menu-container ${showMenu ? 'show-menu' : ''}`}>
+                    <div>
+                        <Link to="/recipes"><h1>Recipes</h1></Link>
+                    </div>
+
+                    <div>
+                        <Link to="/about"><h1>About</h1></Link>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

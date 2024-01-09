@@ -38,7 +38,7 @@ const RecipesArchive = () => {
     }, []);
 
     const list = !loading ? (
-        <div className="card-parent wrap home-conteudo">
+        <div className="card-parent wrap home-conteudo" style={{padding: '1em'}}>
             <Card recipes={filteredItems} />
         </div>
     ) : (
