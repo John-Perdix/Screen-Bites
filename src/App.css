@@ -28,6 +28,12 @@
     position: relative;
 }
 
+.menu-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
 .search-bar {
     display: inline;
     left: -15em;
@@ -68,6 +74,21 @@ input.search-bar.active {
 .navbar h1 {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.burger-icon {
+    display: none;
+}
+
+.burger-icon button{
+    display: flex;
+    align-items: center;
+
+    color: #3D3737;
+    background: none;
+    border: none;
+    font-size: 1em;
+    padding: 0 0.3em 0 0;
 }
 
 .material-symbols-outlined {
@@ -534,12 +555,17 @@ input.search-bar.active {
 .button-default {
     font-family: Shrikhand;
     font-size: 2.5em;
-    color: #F2EADF;
-    background-color: #172180;
+    color: #3D3737;
+    background-color: #F2EADF;
     border: 3px solid #F2EADF;
     border-radius: 60px;
     padding-left: 1em;
     padding-right: 1em;
+}
+
+.button-default a {
+    color: #3D3737;
+   
 }
 
 .home-conteudo-child2 h1 {
@@ -1222,6 +1248,22 @@ disabled {
     .navbar {
         display: flex;
         justify-content: space-between;
+        padding: 0.3em 1em;
+        font-size: 0.8em;
+        margin-bottom: 2em;
+    }
+
+    .navbar img {
+        width: 30px;
+        
+    }
+
+    .logo-parent {
+        margin: auto;
+    }
+
+    .search-bar {
+        height: auto;
     }
 
 
@@ -1231,8 +1273,9 @@ disabled {
         padding: 0;
     }
 
-    .navbar h1 {
-        display: none;
+    .burger-icon {
+        font-size: 2.7em;
+        display: inline;
     }
 
 
@@ -1250,6 +1293,7 @@ disabled {
     .home-conteudo-parent p {
         font-size: 0.8em;
         margin: 0;
+        margin-bottom: 1em;
     }
 
     .home-conteudo-parent {
@@ -1264,10 +1308,11 @@ disabled {
 
     .button{
         font-size: 1em;
-        max-width: max-content;
+        max-width: none;
         padding: 0.5em 3em;
-        
-        
+        width: 10em;
+        text-align: center;
+        margin: 0 auto;
     }
 
     .button-default {
