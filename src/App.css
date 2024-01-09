@@ -46,6 +46,12 @@
     transition: 0.3s ease;
 }
 
+.nav-items{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 input.search-bar.active {
     background-color: #fddad6;
 }
@@ -1250,11 +1256,6 @@ disabled {
         margin-bottom: 2em;
     }
 
-    .nav-items{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
 
     .navbar img {
         width: 30px;
@@ -1269,6 +1270,12 @@ disabled {
 
     .link-nav{
         display: none;
+    }
+
+    .nav-items{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .logo-parent {
