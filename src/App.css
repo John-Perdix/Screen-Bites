@@ -1219,13 +1219,20 @@ disabled {
 
 @media (max-width: 600px) {
     .navbar{
-        display: block;
+        display: flex;
+        justify-content: space-between;
     }
 
 
     .navbar div{
-        margin: auto;
+        max-width: -moz-fit-content;
         text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar h1 {
+        display: none;
     }
 
 
@@ -1241,5 +1248,56 @@ disabled {
 
     .button{
         font-size: 30px;
+    }
+
+    .home-conteudo{
+        margin: 0;
+    }
+
+    .wrap{
+        margin: 0;
+        padding: 0;
+    }
+
+    .search-bar{
+        width:15em;
+    }
+
+    /* ABOUT PAGE */
+
+    .about-parent{
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    .about-child{
+        display: block;
+        padding: 5px;
+    }
+
+    .about-child2{
+        display: block;
+        padding: 5px;
+    }
+
+    .about-child2 img{
+        width: 100%;
+    }
+
+    .about-child-dir{
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+
+    .about-child3{
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+    .about-child p {
+        margin: 10px 0 ;
     }
 }
