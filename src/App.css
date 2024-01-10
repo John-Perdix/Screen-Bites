@@ -50,6 +50,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
 }
 
 input.search-bar.active {
